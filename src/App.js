@@ -1,24 +1,17 @@
-import './App.css';
-import { Header } from './components/Header';
-import { Balance } from './components/Balance';
-import { DebitsAndCredits } from './components/DebitsAndCredits';
-import { TransactionList } from './components/TransactionList';
-import { AddTransaction } from './components/AddTransaction';
+import React from "react";
+import Dashboard from "./views/Dashboard";
+import 'antd/dist/antd.css'; 
+import {
+  BrowserRouter as Router
+} from "react-router-dom"
 
-import { GlobalProvider } from './context/GlobalState';
-
-function App() {
+const App = () => {
   return (
-    <GlobalProvider>
-      <Header />
-      <div className="container">
-        <Balance />
-        <DebitsAndCredits />
-        <TransactionList />
-        <AddTransaction />
-      </div>
-    </GlobalProvider>
-  );
+    <Router>
+      <Dashboard/>
+    </Router>
+ 
+  )
 }
 
 export default App;
